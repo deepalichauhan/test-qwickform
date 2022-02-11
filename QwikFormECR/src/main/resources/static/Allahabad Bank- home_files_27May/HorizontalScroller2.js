@@ -1,0 +1,4 @@
+document.write('<td width="'+swidth+'px">');
+if(document.layers){document.write('<ilayer id="ns4div" width="'+swidth+'" height="'+sheight+'" bgcolor='+sbcolor+'><layer id="ns4div1" width="'+swidth+'" height="'+sheight+'" onmouseover="sspeed=0;" onmouseout="sspeed=restart"></layer></ilayer>')}
+if(document.getElementById||document.all){document.write('<div style="position:relative;overflow:hidden;width:'+swidth+'px;height:'+sheight+'px;clip:rect(0 '+swidth+'px '+sheight+'px 0);background-color:'+sbcolor+';" onmouseover="sspeed=0;" onmouseout="sspeed=restart">');if(gekso==0&&operbr==-1)document.write('<div id="iens6div" style="position:absolute;height:'+sheight+'px;"></div></div>');else 
+document.write('<div id="iens6div" style="position:relative;height:'+sheight+'px;"></div><div id="operaslider" style="position:absolute;visibility:hidden;"></div></div>');}

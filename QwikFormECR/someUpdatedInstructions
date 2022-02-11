@@ -1,0 +1,33 @@
+update some fields in data_latefee table
+latefeestartdate, latefeeenddate as DateTime
+
+
+create an another mapper table of datafeedetails and datalatefee
+=================================================================
+DROP TABLE IF EXISTS `data_fee_details_data_latefee`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `data_fee_details_data_latefee` (
+  `data_fee_details_id` int(11) NOT NULL,
+  `data_latefee_id` int(11) NOT NULL,
+  PRIMARY KEY (`data_fee_details_id`,`data_latefee_id`),
+  UNIQUE KEY `UK_o31vflkj9658kl3ioh8d2h` (`data_latefee_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+create a lookup table for late fee type
+==============================================
+
+DROP TABLE IF EXISTS `lookuplatefeetype`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `lookuplatefeetype` (
+  `id` int(11) NOT NULL,
+  `lateFeeType` varchar(255) DEFAULT NULL,
+  `Description` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `lookuplatefeetype` VALUES (1,'Fixed','for fixed amount of value'),(2,'Monthly','If late fee is depand on maonthly periodic as per 1st day to 10th day is without late fee'),(3,'Daily Update','If late fee is daily updated'),(4,'Periodic','If late fee is as periodic'),(5,'Percentage','If late fee is counted as in Percentage');

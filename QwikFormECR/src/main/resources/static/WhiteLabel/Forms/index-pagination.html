@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STUDENT FILLING FORMS</title>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<link href="css/docs.min.css" rel="stylesheet" type="text/css">
+    <link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/wizard.css" rel="stylesheet" />
+	<link href="css/style-tabbs.css" rel="stylesheet">
+	<link href="css/style-new.css" rel="stylesheet">
+	<script src="js/gallery.js"></script>
+	<script src="js/jquery.simplewizard.js"></script>
+
+<style>
+
+.item {
+    width: 120px;
+    height: 120px;
+    height: auto;
+    float: left;
+    margin: 3px;
+    padding: 3px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+</head>
+
+<body class="scrollTop">
+<div class="logoparts">
+	<span class="clientlogo item"><img src="images/hdfc.png" alt="" title=""></span>
+	<span class="providerlogo item" style="float:right;"><img src="images/sabpaisa-logo.png" alt="" title="" ></span>
+</div>
+<div class="container bg-img-x" style="margin:15px auto;">
+	
+	
+	<div id="wizard1" class="wizard">
+	
+	
+	
+	
+
+	
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box off" id="a_13">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-main-bg-table">
+						<div class="form-group-banks-step3">
+						
+						<div class="bs-example-td">
+			
+							<table class="table-td" style="width:100%;">
+									<tr class="panel-heading">									
+										<td colspan="2">
+										Payment Summary
+										</td>
+									</tr>
+									
+									
+								</table>
+								
+								<table class="table-td" style="width:100%;">
+									<tr>
+										<td colspan="2"></td>
+									</tr>
+									<tr>
+									
+										<td class="wd-four">Document Titlesfds</td>
+										
+										
+										<td class="wd-six">Testing.doc</td>
+										
+									</tr>
+									
+									
+									<tr>
+									
+										<td class="wd-four">Title</td>
+										
+										<td class="wd-six">Mr.</td>
+										
+									</tr>
+									
+									<tr>
+									
+										<td class="wd-four">Textbox</td>
+										
+										<td class="wd-six">Text Box Name</td>
+										
+									</tr>
+									<tr>
+									
+										<td class="wd-four">Email</td>
+										
+										<td class="wd-six">abc@gmail.com</td>
+										
+									</tr>
+									
+									<tr>
+									
+										<td class="btm-bor wd-four">Amount</td>
+										
+										<td class="btm-bor wd-six"><input type="text" placeholder="Rs.3,000" style="padding:3px 8px; border-radius:4px; border:1px solid #ccc;"> <span><a href="#" style="text-decoration:underline; padding-left:10px;">Edit</a></span></td>
+										
+									</tr>
+									
+									
+								
+							</table>
+							<div class="form-check" style="padding-top:20px;">
+							  <label class="form-check-label">
+								<input class="form-check-input" type="checkbox"> I accept terms & condition for payment
+							  </label>
+							</div>
+							<div class="form-group">
+								<div class="offset-sm-2 col-sm-12" style="padding-bottom:20px;">
+										<!--<button type="submit" class="wizard-prev btn btn-primary">Details Not Ok</button>-->
+										<span id="stepsseven"><button type="submit" class="wizard-goto btn btn-primary" id="btnSubmit-seven">Details Not Ok</button></span>
+										<span id="stepssix-"><button type="submit" class="wizard-goto btn btn-primary" id="btnSubmit-eight">Details Ok</button></span>
+									</div>					
+						</div>
+						</div>
+						
+							
+					</div>
+					
+						
+						</div>
+		
+	
+	</div>
+	
+	
+	</div>
+</div>
+<div id="footer">
+		  
+			<p>© Copyright 2016. powered by <a href="http://www.sabpaisa.com/" alt="SRS Live Technologies Pvt Ltd" title="SRS Live Technologies Pvt Ltd">SRS Live Technologies Pvt Ltd</a>.</p>
+			<ul class="footer-ul">
+				<li><a href="http://43.252.89.79:9191/FormLinkLocal/ContactUs.html" target="_blank">Contact Us</a></li>
+				<li><a href="http://43.252.89.79:9191/FormLinkLocal/PrivacyPolicy.html" target="_blank">Privacy Policy</a></li>				
+				<li><a href="http://43.252.89.79:9191/FormLinkLocal/TermsAndConditions.html" target="_blank">Terms&Conditions</a></li>
+				<li><a href="http://43.252.89.79:9191/FormLinkLocal/Disclaimer.html" target="_blank">Disclaimer</a></li>
+			</ul>
+		</div>
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("select").change(function(){
+				$(this).find("option:selected").each(function(){
+					if($(this).attr("value")=="individual-box"){
+						$(".councils").not(".individual-box").hide();
+						$(".individual-box").show();
+					}
+					else if($(this).attr("value")=="institue-box"){
+						$(".councils").not(".institue-box").hide();
+						$(".institue-box").show();
+					}
+					
+				});
+			}).change();
+		});
+		</script>
+	
+	
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-second").click(function () {
+				var ddlFruitsed = $("#ddlFruitsed");
+				if (ddlFruitsed.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#11").removeClass('active');
+				$("#12").addClass('active');
+				return true;
+			});
+		});		
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmitthree").click(function () {
+				var ddlFruitsedthird = $("#ddlFruitsedthird");
+				if (ddlFruitsedthird.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}				
+				$("#11").removeClass('active');
+				$("#12").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-first").click(function () {
+				var ddlFruits = $("#ddlFruits");
+				if (ddlFruits.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#2").removeClass('active');
+				$("#1").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-five-t").click(function () {
+				var stepbackfiveyt = $("#stepbackfiveyt");
+				if (stepbackfiveyt.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#13").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-four").click(function () {
+				var ddlFruitsfour = $("#ddlFruitsfour");
+				if (ddlFruitsfour.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#2").removeClass('active');
+				$("#1").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-stepfirst").click(function () {
+				
+				var ddlFruitsstepfirst = $("#ddlFruitsstepfirst");
+				if (ddlFruitsstepfirst.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				
+				$("#tab-10-1-1").removeClass('is-active');
+				$("#tab-10-1").hide();
+				$("#tab-10-1").removeClass('is-open');
+				
+				$("#tab-11-1-1").addClass('is-active');
+				$("#tab-11-1").addClass('is-open');
+				$("#tab-11-1").show();
+				return true;
+			});
+			$("#btnSubmit-five").click(function () {
+				
+	
+				$("#tab-11-1-1").removeClass('is-active');
+				$("#tab-11-1").hide();
+				$("#tab-11-1").removeClass('is-open');
+				
+				$("#tab-12-1-1").addClass('is-active');
+				$("#tab-12-1").addClass('is-open');
+				$("#tab-12-1").show();
+				return true;
+			});
+			
+			//$("#btnSubmit-six").click(function () {
+				
+	
+				//$("#tab-12-1-1").removeClass('is-active');
+				//$("#tab-12-1").hide();
+				//$("#tab-12-1").removeClass('is-open');
+				
+				//$("#tab-13-1-1").addClass('is-active');
+				//$("#tab-13-1").addClass('is-open');
+				//$("#tab-13-1").show();
+				//return true;
+			//});
+			
+			
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-eight").click(function () {
+				var ddlFruitsfive = $("#ddlFruitsfive");
+				if (ddlFruitsfive.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#13").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#firstback").click(function () {
+				var ddlFruitsfirstback = $("#ddlFruitsfirstback");
+				if (ddlFruitsfirstback.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#11").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	
+	<script type="text/javascript">
+		$(function () {
+			$("#firstbackthree").click(function () {
+				var ddlFruitsfirstbackthree = $("#ddlFruitsfirstbackthree");
+				if (ddlFruitsfirstbackthree.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#11").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#firstbacktwok").click(function () {
+				var ddlFruitsfirstbacktwo = $("#ddlFruitsfirstbacktwo");
+				if (ddlFruitsfirstbacktwo.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#11").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-seven").click(function () {
+				var ddlFruitsseven = $("#ddlFruitsseven");
+				if (ddlFruitsseven.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#13").removeClass('active');
+				$("#12").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#stepback").click(function () {
+				var stepbackPrev = $("#stepbackPrev");
+				if (stepbackPrev.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#11").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit").click(function () {
+				var ddlFruits = $("#ddlFruits");
+				if (ddlFruits.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#11").removeClass('active');
+				$("#12").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	
+	
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmited").click(function () {
+				var ddlFruitsed = $("#ddlFruitsed");
+				if (ddlFruitsed.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Form!");
+					return false;
+				}
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmited-recipt").click(function () {
+				var ddlFruitsed = $("#ddlFruitsed");
+				if (ddlFruitsed.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Fill All Mendetory Fills as above!");
+					return false;
+				}
+				return true;
+			});
+		});
+	</script>
+	<script>
+	$(document).ready(function () {
+	  $('.accordion-tabs-minimal').each(function(index) {
+		$(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+	  });
+	  $('.accordion-tabs-minimal').on('click', 'li > a.tab-link', function(event) {
+		if (!$(this).hasClass('is-active')) {
+		  event.preventDefault();
+		  var accordionTabs = $(this).closest('.accordion-tabs-minimal');
+		  accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+		  $(this).next().toggleClass('is-open').toggle();
+		  accordionTabs.find('.is-active').removeClass('is-active');
+		  $(this).addClass('is-active');
+		} else {
+		  event.preventDefault();
+		}
+	  });
+	});
+	</script>
+    <script>
+        $(function () {
+            $("#wizard1").simpleWizard({
+                cssClassStepActive: "active",
+                cssClassStepDone: "done",
+                onFinish: function() {
+                    alert("Wizard finished")
+                }
+            });
+        });
+    </script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-36251023-1']);
+	  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+				e.preventDefault();
+				$(this).siblings('a.active').removeClass("active");
+				$(this).addClass("active");
+				var index = $(this).index();
+				$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+				$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+			});
+		});
+	</script>
+	
+	<script>
+		
+		$('#btnClick').on('click',function(){
+			if($('#1').css('display')!='none'){
+			$('#2').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#2').css('display')!='none'){
+				$('#1').show().siblings('div').hide();
+			}
+		});
+
+		$('#btnClicks').on('click',function(){
+			if($('#2').css('display')!='none'){
+			$('#1').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#1').css('display')!='none'){
+				$('#2').show().siblings('div').hide();
+			}
+		});
+		
+		$('#btnClicksfour').on('click',function(){
+			if($('#9').css('display')!='none'){
+			$('#8').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#8').css('display')!='none'){
+				$('#9').show().siblings('div').hide();
+			}
+		});
+		
+		$('#btnClicksstepfirst').on('click',function(){
+			if($('#11-1').css('display')!='none'){
+			$('#10-1').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#10-1').css('display')!='none'){
+				$('#11-1').show().siblings('div').hide();
+			}
+		});
+			
+		$('#stepsfive-t').on('click',function(){
+			if($('#a_13').css('display')!='none'){
+			$('#a_12').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_12').css('display')!='none'){
+				$('#a_13').show().siblings('div').hide();
+			}
+		});
+		
+		$('#stepssix').on('click',function(){
+			if($('#a_14').css('display')!='none'){
+			$('#a_13').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_13').css('display')!='none'){
+				$('#a_14').show().siblings('div').hide();
+			}
+		});
+		
+		$('#btnfirstback').on('click',function(){
+			if($('#a_12').css('display')!='none'){
+			$('#a_11').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_11').css('display')!='none'){
+				$('#a_12').show().siblings('div').hide();
+			}
+		});
+		
+		$('#btnfirstbackthreee').on('click',function(){
+			if($('#a_12').css('display')!='none'){
+			$('#a_11').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_11').css('display')!='none'){
+				$('#a_12').show().siblings('div').hide();
+			}
+		});
+		
+		$('#btnfirstbacktwo').on('click',function(){
+			if($('#a_12').css('display')!='none'){
+			$('#a_11').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_11').css('display')!='none'){
+				$('#a_12').show().siblings('div').hide();
+			}
+		});
+		
+		$('#stepsseven').on('click',function(){
+			if($('#a_13').css('display')!='none'){
+			$('#a_12').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_12').css('display')!='none'){
+				$('#a_11').show().siblings('div').hide();
+			}
+		});
+		$('#btnClickst').on('click',function(){
+			if($('#2').css('display')!='none'){
+			$('#1').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#1').css('display')!='none'){
+				$('#2').show().siblings('div').hide();
+			}
+		});
+		$('#stepstwo').on('click',function(){
+			if($('#a_12').css('display')!='none'){
+			$('#a_11').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_11').css('display')!='none'){
+				$('#a_12').show().siblings('div').hide();
+			}
+		});
+		$('#stepsthree').on('click',function(){
+			if($('#a_12').css('display')!='none'){
+			$('#a_11').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_11').css('display')!='none'){
+				$('#a_12').show().siblings('div').hide();
+			}
+		});
+		$('#stepsfour').on('click',function(){
+			if($('#a_14').css('display')!='none'){
+			$('#a_13').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_13').css('display')!='none'){
+				$('#a_14').show().siblings('div').hide();
+			}
+		});
+		
+		
+	</script>
+	
+	<script>
+		$('#btnClickstcaptcha').on('click',function(){
+			if($('#8').css('display')!='none'){
+			$('#9').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#9').css('display')!='none'){
+				$('#8').show().siblings('div').hide();
+			}
+		});
+	</script>
+	
+	
+	
+	<script>
+        (function(){
+    function previewImage(file) {
+        var galleryId = "gallery";
+
+        var gallery = document.getElementById(galleryId);
+        var imageType = /image.*/;
+
+        if (!file.type.match(imageType)) {
+            throw "File Type must be an image";
+        }
+
+        var thumb = document.createElement("div");
+        thumb.classList.add('thumbnail');
+
+        var img = document.createElement("img");
+        img.file = file;
+        thumb.appendChild(img);
+        gallery.appendChild(thumb);
+
+        // Using FileReader to display the image content
+        var reader = new FileReader();
+        reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+        reader.readAsDataURL(file);
+    }
+
+    var uploadfiles = document.querySelector('#fileinput');
+    uploadfiles.addEventListener('change', function () {
+        var files = this.files;
+        for(var i=0; i<files.length; i++){
+            previewImage(this.files[i]);
+        }
+
+    }, false);
+})();
+    </script>
+
+</body>
+</html>

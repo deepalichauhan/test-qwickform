@@ -1,0 +1,127 @@
+#main {
+	width: 695px;
+	float: left;
+}
+#main .box-03 {
+	margin:0px;
+}
+#main .box-03 #loopedSlider {
+	position:relative;
+	margin: 0px;
+	padding: 0px;
+	z-index: 2;
+}
+#main .box-03 #loopedSlider .container {
+	width:630px;
+	height:127px;
+	overflow:hidden;
+	position:relative;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #EEEEEE;
+	left:10px;
+}
+#main .box-03 #loopedSlider .slides {
+	position:absolute;
+	top:24px;
+	left:0px;
+}
+#main .box-03 #loopedSlider .slides div {
+	display:inline;
+	position:absolute;
+	top:0;
+	width:630px;
+	height: 120px;
+	padding-top:10px;
+}
+#main .box-03 #loopedSlider ul.pagination {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	margin:0;
+	width:75px;
+}
+#main .box-03 #loopedSlider ul.pagination li {
+	float:left;
+	margin:0 5px;
+}
+#main .box-03 #loopedSlider ul.pagination a {
+	display:block;
+	width:8px;
+	height:8px;
+	overflow:hidden;
+	background-image:url("../design/pagination.gif");
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+#main .box-03 #loopedSlider ul.pagination a span {
+	display:none;
+}
+#main .box-03 #loopedSlider ul.pagination li.active a {
+	background-position:0 -8px;
+}
+#main .box-03 #loopedSlider ul.list {
+	margin:0;
+	padding: 0px;
+	list-style-type: none;
+}
+#main .box-03 #loopedSlider ul.list li {
+	display:block;
+	float:left;
+	width:210px;
+	cursor:pointer;
+}
+#main .box-03 #loopedSlider ul.list li:hover {
+	background-image:url(../images11/shadow.png);
+	background-position: -15px -5px;
+	background-repeat:no-repeat;
+}
+#main .box-03 #loopedSlider ul.list li a:link, #main .box-03 #loopedSlider ul.list li a:visited {
+	text-decoration:none;
+}
+#main .box-03 #loopedSlider ul.list li img {
+	display:block;
+	border:1px #666666 solid;
+}
+#main .box-03 #loopedSlider .previous {
+	/*	position:absolute;
+	top:0px;
+	left:0px;
+*/
+	float:left;
+}
+#main .box-03 #loopedSlider .next {
+	position:absolute;
+	top:0px;
+	right:0px;
+	float:left;
+	display: block;
+}
+.blue_heading_14 {
+	font-size:14px;
+	color:#105ea1;
+	font-weight:bold;
+}
+.font_12 {
+	font-size:12px;
+	color:#000000;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.Products_home {
+	width:100%;
+	float:left;
+	height:24px;
+	background-color:#eeeeee;
+	top:0px;
+	left:0px;
+	position:absolute;
+	z-index:11px;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	line-height:24px;
+	background-image: url(../../images/onlineserives/Products_allbank.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}

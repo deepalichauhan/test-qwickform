@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE log4j:configuration PUBLIC
+  "-//APACHE//DTD LOG4J 1.2//EN" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+<log4j:configuration
+	xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+	<!-- File Configuration -->
+	<appender name="File"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Threshold" value="INFO" />
+		
+		<!-- <param name="File" 
+			value="/usr/local/tomcat8-uatLinkPaisa/logs/QwikFormsInfo.log" />	 -->
+		
+		<!-- <param name="File" 
+			value="/usr/local/tomcat-qforms/logs/QwikFormsInfo.log" /> -->
+			
+		<param name="File"
+			value="/usr/local/tomcat-qforms/logs/qwikFormsInfo.log" />
+
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<param name="MaxFileSize" value="50MB" />
+		<param name="MaxBackupIndex" value="20" />
+
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- <param name="ConversionPattern" value="%d{MM-dd@HH:mm:ss,SSSS} %-5p 
+				[%c{3} : %L] %x - %m%n" /> -->
+			<param name="ConversionPattern"
+				value="%d{MM-dd-yyyy HH:mm:ss} [%5p] [%C{3} - %M : %L] - %m%n%ex" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="INFO" />
+			<param name="LevelMax" value="INFO" />
+		</filter>
+	</appender>
+	<!-- End of File Configuration -->
+
+	<!-- File Configuration -->
+	<appender name="Exception"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Threshold" value="ERROR" />
+		
+		<!-- <param name="File" 
+			value="/usr/local/tomcat8-uatLinkPaisa/logs/QwikFormsError.log" />	 -->
+		
+		<!-- <param name="File" 
+			value="/usr/local/tomcat-qforms/logs/QwikFormsError.log"	/> -->
+			
+		<param name="File"
+			value="/usr/local/tomcat-qforms/logs/qwikFormsError.log" />
+			
+		<!-- <param name="File"
+			value="/home/praveen/Development/installedSoftware/apache-tomcat-9.0.14/logs/QwikFormsError.log" /> -->
+			
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="50MB" />
+		<param name="MaxBackupIndex" value="20" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- <param name="ConversionPattern" value="%d{MM-dd@HH:mm:ss,SSSS} %-5p 
+				[%c{3} : %L] %x - %m%n" /> -->
+			<!-- <param name="ConversionPattern" value="%d{MM-dd-yyyy HH:mm:ss} [%-5p] 
+				[%C{1} - %M : %L] - %m%n" /> -->
+			<param name="ConversionPattern"
+				value="%d{MM-dd-yyyy HH:mm:ss} [%5p] [%C{3} - %M : %L] - %m%n%ex" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="ERROR" />
+			<param name="LevelMax" value="ERROR" />
+		</filter>
+	</appender>
+	<!-- End of File Configuration -->
+
+	<!-- Console Configuration -->
+	<appender name="console"
+		class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{MM-dd@HH:mm:ss,SSSS} %-5p [%c{3} : %L] %x - %m%n" />
+		</layout>
+	</appender>
+	<!-- End of Console Configuration -->
+
+	<appender name="async" class="org.apache.log4j.AsyncAppender">
+		<param name="BufferSize" value="500" />
+		<appender-ref ref="console" />
+		<appender-ref ref="File" />
+		<appender-ref ref="Exception" />
+	</appender>
+
+	<!-- <logger name="org.apache"> <level value="INFO" /> <appender-ref ref="Fie"/> 
+		</logger> -->
+
+	<!-- <logger name="com.mchange"> <level value="INFO" /> <appender-ref ref="Fie"/> 
+		</logger> -->
+
+	<!-- Log everything (a lot of information, but very useful for troubleshooting) -->
+	<!-- <logger name="org.hibernate"> <level value="INFO" /> <appender-ref 
+		ref="Fie"/> <appender-ref ref="console"/> </logger> -->
+
+	<!-- Log All JDBC bind parameter runtime arguments -->
+	<!-- <logger name="org.hibernate.type"> <level value="TRACE" /> <appender-ref 
+		ref="Fie"/> <appender-ref ref="console"/> </logger> -->
+	<!-- <logger name="org.hibernate.SQL"> <level value="INFO"/> <appender-ref 
+		ref="Fie"/> <appender-ref ref="console"/> </logger> -->
+
+	<logger name="PluginLogs" additivity="false">
+		<level value="ALL" />
+		<appender-ref ref="File" />
+		<appender-ref ref="Exception" />
+	</logger>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="File" />
+		<appender-ref ref="Exception" />
+		<appender-ref ref="console" />
+	</root>
+
+</log4j:configuration>

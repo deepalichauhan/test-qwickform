@@ -1,0 +1,115 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.accordion-tabs-minimal {
+  line-height: 1.5;
+  padding: 0;
+}
+
+.accordion-tabs-minimal::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.accordion-tabs-minimal .tab-header-and-content {
+  list-style: none;
+}
+
+@media screen and (min-width: 40em) {
+  .accordion-tabs-minimal .tab-header-and-content {
+    display: inline;
+  }
+  
+}
+
+.accordion-tabs-minimal .tab-link {
+  border-top: 1px solid #dcdcdc;
+  color: #008ae7;
+  display: block;
+  padding: 0.55em 1.618em;
+  text-decoration: none;
+  background:#fff;
+  font-weight:bold;
+}
+
+@media screen and (min-width: 40em) {
+  .accordion-tabs-minimal .tab-link {
+    border-top: 0;
+    display: inline-block;
+	background:#fff;
+  }
+}
+
+.accordion-tabs-minimal .tab-link:hover {
+  color: #000;
+  background:#f5f5f5;
+}
+
+.accordion-tabs-minimal .tab-link:focus {
+  outline: none;
+}
+
+.accordion-tabs-minimal .tab-link.is-active {
+  border-bottom: 0;  
+  background:#0071bc;
+  color:#fff;
+}
+
+@media screen and (min-width: 40em) {
+  .accordion-tabs-minimal .tab-link.is-active {
+    /* border-bottom-color here needs to be set to the same color as your background to hide the top border on the content */
+    border-bottom-color: #fff;
+    margin-bottom: -1px;
+	background:#222546;
+	color:#fff;
+  }
+  
+}
+
+.accordion-tabs-minimal .tab-content {
+  padding: 1.5em 1.618em;
+  width: 100%;
+  background:transparent url("bg-px.png") repeat 0 0;
+}
+
+@media screen and (min-width: 40em) {
+  .accordion-tabs-minimal .tab-content {
+    border-top: 4px solid #222546;
+    float: left;
+	background:transparent url("bg-px.png") repeat 0 0;
+	color:#fff;
+	border-left:1px solid #222546;
+	border-right:1px solid #222546;
+	border-bottom:1px solid #222546;
+	min-height:295px;
+  }
+  .accordioan-tabs-minimal .tab-content p{color:#000;}
+  .is-open{}
+  
+}
+
+@media only screen and (max-width: 368px) {
+.accordion-tabs-minimal .tab-content{color:#fff;}
+	.pad-none{padding:0;}
+	.intro-text{text-align:center;}
+	.devs{display:none;}
+	.intro-text{padding-top:8px;}
+	.bank-form{width:92%;}
+	.no-mpad{padding:0;}
+	.accordion-tabs-minimal .tab-content{padding:5px 0;}
+	.sssl{display:none}
+}
+
+@media only screen and (max-width: 768px) {
+	.bank-form{width:92%;}
+	.sssl{display:none}
+	.devs{display:none;}
+}
+

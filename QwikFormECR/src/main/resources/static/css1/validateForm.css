@@ -1,0 +1,150 @@
+body{
+					background-image: url(../images/banneres.jpg);
+					margin: 0px;
+					padding: 0px;
+			
+				}
+
+				hr{
+					background:#fff;
+					padding: 2px;	
+				}
+				html {
+  
+  margin:0px;
+	padding: 0px;
+  overflow-x: hidden;
+}
+			.footer-copyrights {
+				text-align: center;
+    padding: 10px 8px;
+    background: #222222 none repeat scroll 0 0;
+    color: #666;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0px;
+
+			
+}
+img {
+	vertical-align: middle;
+    border-style: none;
+    width: 13%;
+    padding: 12px;
+}
+.form-control{
+	width: 80%;
+}
+	.background-colour {
+    background: #fff;
+}
+.blue{
+	background:grey;
+}
+.size {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 12px;
+		color: #fff;
+}
+.size1 {
+    font-size: 18px;
+    
+    padding: 12px;
+		color: #fff;
+}
+	.square {
+		background: aqua;
+			margin: 147px 0px 30px 158px;
+			width: 50%;
+			/* height: 50%; */
+			height: 279px;
+			box-shadow: 0px 0px 10px 3px grey;
+	}
+	.rect {
+			background: #a2afaf;
+			width: 30%;
+			margin: 149px 4px 29px 51px;
+			box-shadow: 0px 0px 10px 3px grey;
+	}
+	.h2, h2 {
+			font-size: 2rem;
+			margin: 35px;
+			color: #fff;
+	}
+	label {
+	
+			display: inline-block;
+			margin-bottom: .5rem;
+			margin: 25px;
+			font-weight: bold;
+			color: #fff;
+			font-size: 25px;
+   /*  text-transform: uppercase; */
+	}
+	li {
+    color: #fff;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+	body {
+  
+  font-weight: normal;
+  font-size: 15px;
+  letter-spacing: 0;
+  color: #333333;
+  line-height: 30px;
+ 
+  -webkit-overflow-scrolling: touch;
+  /* Fix for webkit rendering */
+  
+  font-family: Sailec-Medium,Helvetica,sans-serif !important;
+
+  width: auto!important; overflow-x: hidden!important;
+  height: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.col-md-6.the-green-bg {
+    background: #e24e17;
+   
+}
+.col-md-6.the-green-bg1 {
+    background: #9ba1a7;
+}
+.classWithPad { margin:33px; padding:10px; 
+
+  /* The image used */
+  background-image: url("../images/orangebg-px.png");
+
+  
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.classWithPad1 { margin:33px; padding:10px; 
+
+/* The image used */
+background-image: url("../images/bg-px.png");
+
+
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+button.btn.btn-primary.pull-right.btn-block {
+    width: 30%;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #fdb933;
+}
+

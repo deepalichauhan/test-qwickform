@@ -1,0 +1,53 @@
+Features of QwikForms currently running
+=======================================
+
+1. Admin Login and Admin Dash board
+	
+	Client creation by COB
+	Form configuration for client
+		Dynamic form creation
+		Offline form creation
+	Form Approval Process
+
+2. Client Login and Final report
+	
+	Check all approved form
+	Applicant Report
+	Transaction Report
+
+3. User flow for dynamic form
+
+	choose Payer from PayerList
+	choose approved Form from formlist
+	Fill basic form
+	fill main form
+	goto PG
+	Return from PG
+	Reciept generation if transaction is success
+
+4. User flow for Offline form
+	
+	Enter validate field value and showen captcha
+	Enter Required field value in blank fields
+	SummaryPage details
+	goto PG
+	Return from PG
+	Reciept generation if transaction is success
+
+5. Regenrate Reciept
+
+
+Recent Pending Features
+================	
+
+1. Create some APIs for COB client dash board
+2. Partial payment process on Offline Form
+3. Manage Form Life Cycle (New - Approve - Disapprove - Report)
+4. Work on Client Report data fetching as required field (Custmize report)
+5. check text limit for each form field not more then 255 varchar, if more then return proper UI message, in SampleTransController
+
+
+
+
+
+

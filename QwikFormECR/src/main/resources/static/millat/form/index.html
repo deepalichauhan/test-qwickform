@@ -1,0 +1,786 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>STUDENT FILLING FORMS</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap-select.css">
+	<script src="js/bootstrap-select.js"></script>
+	
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<link href="css/docs.min.css" rel="stylesheet" type="text/css">
+    <link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/wizard.css" rel="stylesheet" />
+	<link href="css/style-tabbs.css" rel="stylesheet">
+	<link href="css/style-new.css" rel="stylesheet">
+	<script src="js/gallery.js"></script>
+	<script src="js/jquery.simplewizard.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+$(document).ready(function()
+{
+	$('ul#main li').click(function()
+	{
+	$('#main').find('li').removeClass('active')
+		$(this).addClass('active')
+		$('.box').hide()
+		$( '#a_' + $(this)  .attr('id')  ).show()
+	
+	});
+
+});
+</script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			$(this).scrollTop(0);
+		});
+</script>
+
+</head>
+
+<body class="scrollTop">
+<div class="logoparts">
+	<span class="clientlogo"><img src="images/bcci-logo.jpg" alt="" title="" width="100px" height="39px"></span>
+	<span class="providerlogo"><img src="images/sabpaisa-logo.png" alt="" title="" width="100px" height="39px"></span>
+</div>
+<div class="container bg-img-x" style="margin:15px auto;">
+	<!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-colors">
+		<ul id="main" class="nav nav-tabs">
+			<li role="presentation" class="wizard-step-indicator active" id="11"><a href="#start">First Tabs</a></li>
+			<li role="presentation" class="wizard-step-indicator not-allowed" id="12"><a href="#profile">Second Tabs</a></li>
+			<li role="presentation" class="wizard-step-indicator not-allowed" id="13"><a href="#messages">Confirmation</a></li>
+			
+		</ul>
+	</div>-->
+	
+	<div id="wizard1" class="wizard">
+	
+	
+	
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box " id="a_11">
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-main-bg" id="1">
+									<div class="pan-heading">QWIK COLLECT</div>
+									<div class="top-pad"></div> 
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<div class="col-sm-12 labeling">
+												<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+													<div class="university-logo">
+															<img src="images/bcci-logobig.jpg" alt="" title="" class="border-img">
+														
+													</div>
+												</div>
+												
+												<div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+												
+												<div class="title-name">Bombay Chamber Of Commerce and Industry</div>
+												<label for="exampleInputEmail1" class="col-sm-3 col-form-label labeling">Select Payer Type *</label>
+												<div class="col-sm-6 ddown">
+													<select class="form-control selectpicker">
+														<option value="" selected="">--Selected--</option>
+														<!--<option value="individual-box">Registration</option>-->
+														<option value="institue-box">Registration</option>
+													</select>
+												  </div>
+												<!--<div class="col-sm-6" id="">
+													<select id="exampleSelect1" class="form-control valid" aria-invalid="false">
+														<option value="" selected="">--Selected--</option>
+														<option value="individual-box">Individual</option>
+														<option value="institue-box">Institute</option>
+													</select>
+												</div>-->
+												<div class="col-md-12 cntrs labeling-pad">
+													<span id="btnClicks"><input type="submit" id="btnSubmit-first" value="Submit" class="wizard-goto btn btn-primary"/></span>
+												</div>
+												</div>
+												
+											</div>
+										 <div class="col-md-12 labeling impt">
+												<ul>
+													<li>Mandatory fields are marked with an asterisk (*)</li>
+													<li>FormLink is a unique service powered by SabPaisa for paying fees, taxes, utility bill online to educational institutions, Online taxes, and/or any other corporates/institutions.</li>
+												</ul>
+											</div>
+									</div>
+							</div>
+		<div id="2" class="acrd-tabs" style="display:none;">
+								 <ul class="accordion-tabs-minimal">
+									<li class="tab-header-and-content">
+										<a href="#" class="tab-link is-active">Pay Fees</a>
+										<div class="tab-content is-open" style="display: block;">
+											
+											<div class="col-sm-12 labeling">
+												<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+													<div class="university-logo">
+															<img src="images/bcci-logobig.jpg" alt="" title="" class="border-img">
+														
+													</div>
+												</div>
+												<div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+												
+												<div class="title-name">Bombay Chamber Of Commerce and Industry</div>
+												<div class="individual-box councils">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<label for="exampleInputEmail1" class="col-sm-3 col-form-label labeling">Select Form *</label>
+													
+													
+													<div class="col-sm-7 ddown">
+													<select id="ddlFruitsed" class="form-control selectpicker">
+														<option value="" selected="">--Selected--</option>
+														<option value="1">APPLICATION FOR ISSUE OF MARK SHEET</option>
+														<option value="2">APPLICATION FOR ISSUE OF PROVISIONAL CERTIFICATE</option>
+														<option value="3">APPLICATION FOR ISSUE OF COMPUTERISED MARK SHEET</option>
+														<option value="4">APPLICATION FOR ISSUE OF EQUIVALENCE CERTIFICATE</option>
+														<option value="5">APPLICATION FOR ISSUE OF DUPLICATE REGISTRATION SLIP</option>
+														<option value="6">Application for Preserved Original Form</option>
+														<option value="7">Application for issue of Duplicate Certificate</option>
+														<option value="8">APPLICATION FOR  MIGRATION CERTIFICATE</option>
+														<option value="9">Admission in Correspondence Course in 1st year_Arts</option>
+														<option value="10">Readmission in Correspondence Course - 2nd Year</option>
+														<option value="11">Readdition of Marks - Annual HS Exam -2016-Science</option>
+														<option value="12">Readdition of Marks-Annual HS Exam-2016-Arts</option>
+														<option value="13">Readdition of Marks-Annual HS Exam-2016-Commerce</option>
+														<option value="14">Admission in Correspondence Course in 1st year - Commerce</option>
+													</select>
+												</div>
+												</div>
+												</div>
+												<div class="institue-box councils">
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<label for="exampleInputEmail1" class="col-sm-3 col-form-label labeling">Select A Form *</label>
+													<div class="col-sm-7 ddown">
+													<select id="ddlFruitsed" class="form-control selectpicker">
+														<option value="" selected="">--Selected--</option>
+														<option value="1">Registration Form</option>
+													</select>
+												</div>
+												</div>
+													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+												<label for="exampleInputEmail1" class="col-sm-3 col-form-label labeling">Your Payment *</label>
+												<div class="col-sm-7">
+													<input class="form-control" placeholder="Enter Your Payment" id="phonenum" type="tel">	
+												 </div>
+												 </div>
+													
+													
+												
+												
+												</div>
+												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cntrs labeling-pad">
+													<button type="submit" class="wizard-goto btn btn-primary rht-gap" id="btnClick">Back</button>
+													<a href="payment/payment.html" target="_blank"><span id="stepstwo"><input type="submit" value="Pay" class="wizard-next btn btn-primary" id="btnSubmit-second-"/></span>
+												</div>
+												</div>
+											</div>
+											<div class="col-md-12 labeling impt">
+												<ul>
+													<li>Mandatory fields are marked with an asterisk (*)</li>
+													<li>FormLink is a unique service powered by SabPaisa for paying fees, taxes, utility bill online to educational institutions, Online taxes, and/or any other corporates/institutions.</li>
+												</ul>
+											</div>
+											
+										</div>
+									 </li>
+									<li class="tab-header-and-content">
+									<a href="#" class="tab-link">View Previous Recipt</a>
+									<div class="tab-content">
+									 
+									 
+									  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+										 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="form-group">
+											  <label class="col-lg-4 col-md-12 col-sm-12 col-xs-12">Date of Birth *</label>
+											  <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+												<input type="text" class="form-control" id="formGroupExampleInput" placeholder="DD/MM/YYYY"><img src="images/calendra.png" alt="Calendra" title="Calendra" width="20" height="20" class="cal-endra">	
+											  </div>
+											</div>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="form-group">
+											  <label class="col-lg-4 col-md-12 col-sm-12 col-xs-12">Contact Number *</label>
+											  <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+												<input class="form-control" placeholder="98X XXXX 123" id="phonenum" type="tel">	
+											  </div>
+											</div>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="form-group">
+											  <label class="col-lg-8 col-md-12 col-sm-12 col-xs-12">Transaction ID ( For Particular Transaction )</label>
+											  <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+												<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Transaction ID">	
+											  </div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+									<div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 divider">
+										OR
+									</div>
+									</div>
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<label class="col-lg-4 col-md-12 col-sm-12 col-xs-12">For Specific Date</label>
+										</div>
+										 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+											 
+											<div class="form-group-tt">
+											  <label class="col-lg-4 col-md-12 col-sm-12 col-xs-12">From</label>
+											  <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+												<input type="text" class="form-control" id="formGroupExampleInput" placeholder="DD/MM/YYYY"><img src="images/calendra.png" alt="Calendra" title="Calendra" width="20" height="20" class="cal-endra">
+											  </div>
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+											<div class="form-group-tt">
+											  <label class="col-lg-4 col-md-12 col-sm-12 col-xs-12">To</label>
+											  <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+												<input type="text" class="form-control" id="formGroupExampleInput" placeholder="DD/MM/YYYY"> <img src="images/calendra.png" alt="Calendra" title="Calendra" width="20" height="20" class="cal-endra">
+		
+											  </div>
+											</div>
+										</div>
+									
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cntrs labeling-pad">
+											<button type="submit" class="wizard-goto btn btn-primary rht-gap" id="btnClickst">Back</button>
+											<!--<input type="submit" value="Go" class="wizard-next btn btn-primary" id="btnSubmit-third"/>-->
+											<span id="stepsthree"><input type="submit" value="Go" class="wizard-next btn btn-primary" id="btnSubmitthree"/></span>
+											<!--<span id="stepstwo"><input type="submit" id="btnSubmited-recipt-" value="Go" class="wizard-next btn btn-primary"/></span>-->
+										</div>
+									</div>
+									 <div class="col-md-12 labeling impt">
+												<ul>
+													<li>Mandatory fields are marked with an asterisk (*)</li>
+													<li>FormLink is a unique service powered by SabPaisa for paying fees, taxes, utility bill online to educational institutions, Online taxes, and/or any other corporates/institutions.</li>
+												</ul>
+											</div>
+									 
+									 
+									</div>
+								  
+								  </li>
+								</ul>
+							
+							</div>
+		
+	</div>
+	
+	
+	
+	
+	</div>
+</div>
+<div id="footer">
+		  
+			<p>© Copyright 2016. powered by <a href="http://www.sabpaisa.com/" alt="SRS Live Technologies Pvt Ltd" title="SRS Live Technologies Pvt Ltd">SRS Live Technologies Pvt Ltd</a>.</p>
+			<ul class="footer-ul">
+				<li><a href="#" target="_blank">Contact Us</a></li>
+				<li><a href="#" target="_blank">Privacy Policy</a></li>				
+				<li><a href="#" target="_blank">Terms&Conditions</a></li>
+				<li><a href="#" target="_blank">Payment Security</a></li>
+				<li><a href="#" target="_blank">Disclaimer</a></li>
+			</ul>
+		</div>
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("select").change(function(){
+				$(this).find("option:selected").each(function(){
+					if($(this).attr("value")=="individual-box"){
+						$(".councils").not(".individual-box").hide();
+						$(".individual-box").show();
+					}
+					else if($(this).attr("value")=="institue-box"){
+						$(".councils").not(".institue-box").hide();
+						$(".institue-box").show();
+					}
+					
+				});
+			}).change();
+		});
+		</script>
+	
+	
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-second").click(function () {
+				var ddlFruitsed = $("#ddlFruitsed");
+				if (ddlFruitsed.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#11").removeClass('active');
+				$("#12").addClass('active');
+				return true;
+			});
+		});		
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmitthree").click(function () {
+				var ddlFruitsedthird = $("#ddlFruitsedthird");
+				if (ddlFruitsedthird.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}				
+				$("#11").removeClass('active');
+				$("#12").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-first").click(function () {
+				var ddlFruits = $("#ddlFruits");
+				if (ddlFruits.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#2").removeClass('active');
+				$("#1").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-five-t").click(function () {
+				var stepbackfiveyt = $("#stepbackfiveyt");
+				if (stepbackfiveyt.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#13").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-four").click(function () {
+				var ddlFruitsfour = $("#ddlFruitsfour");
+				if (ddlFruitsfour.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#2").removeClass('active');
+				$("#1").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-stepfirst").click(function () {
+				
+				var ddlFruitsstepfirst = $("#ddlFruitsstepfirst");
+				if (ddlFruitsstepfirst.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				
+				$("#tab-10-1-1").removeClass('is-active');
+				$("#tab-10-1").hide();
+				$("#tab-10-1").removeClass('is-open');
+				
+				$("#tab-11-1-1").addClass('is-active');
+				$("#tab-11-1").addClass('is-open');
+				$("#tab-11-1").show();
+				return true;
+			});
+			$("#btnSubmit-five").click(function () {
+				
+	
+				$("#tab-11-1-1").removeClass('is-active');
+				$("#tab-11-1").hide();
+				$("#tab-11-1").removeClass('is-open');
+				
+				$("#tab-12-1-1").addClass('is-active');
+				$("#tab-12-1").addClass('is-open');
+				$("#tab-12-1").show();
+				return true;
+			});
+			
+			//$("#btnSubmit-six").click(function () {
+				
+	
+				//$("#tab-12-1-1").removeClass('is-active');
+				//$("#tab-12-1").hide();
+				//$("#tab-12-1").removeClass('is-open');
+				
+				//$("#tab-13-1-1").addClass('is-active');
+				//$("#tab-13-1").addClass('is-open');
+				//$("#tab-13-1").show();
+				//return true;
+			//});
+			
+			
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-eight").click(function () {
+				var ddlFruitsfive = $("#ddlFruitsfive");
+				if (ddlFruitsfive.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#13").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#firstback").click(function () {
+				var ddlFruitsfirstback = $("#ddlFruitsfirstback");
+				if (ddlFruitsfirstback.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#11").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	
+	<script type="text/javascript">
+		$(function () {
+			$("#firstbackthree").click(function () {
+				var ddlFruitsfirstbackthree = $("#ddlFruitsfirstbackthree");
+				if (ddlFruitsfirstbackthree.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#11").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#firstbacktwok").click(function () {
+				var ddlFruitsfirstbacktwo = $("#ddlFruitsfirstbacktwo");
+				if (ddlFruitsfirstbacktwo.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#11").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit-seven").click(function () {
+				var ddlFruitsseven = $("#ddlFruitsseven");
+				if (ddlFruitsseven.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#13").removeClass('active');
+				$("#12").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#stepback").click(function () {
+				var stepbackPrev = $("#stepbackPrev");
+				if (stepbackPrev.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#12").removeClass('active');
+				$("#11").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmit").click(function () {
+				var ddlFruits = $("#ddlFruits");
+				if (ddlFruits.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Payer Type!");
+					return false;
+				}
+				$("#11").removeClass('active');
+				$("#12").addClass('active');
+				return true;
+			});
+		});
+	</script>
+	
+	
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmited").click(function () {
+				var ddlFruitsed = $("#ddlFruitsed");
+				if (ddlFruitsed.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Select Form!");
+					return false;
+				}
+				return true;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$("#btnSubmited-recipt").click(function () {
+				var ddlFruitsed = $("#ddlFruitsed");
+				if (ddlFruitsed.val() == "") {
+					//If the "Please Select" option is selected display error.
+					alert("Please Fill All Mendetory Fills as above!");
+					return false;
+				}
+				return true;
+			});
+		});
+	</script>
+	<script>
+	$(document).ready(function () {
+	  $('.accordion-tabs-minimal').each(function(index) {
+		$(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+	  });
+	  $('.accordion-tabs-minimal').on('click', 'li > a.tab-link', function(event) {
+		if (!$(this).hasClass('is-active')) {
+		  event.preventDefault();
+		  var accordionTabs = $(this).closest('.accordion-tabs-minimal');
+		  accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+		  $(this).next().toggleClass('is-open').toggle();
+		  accordionTabs.find('.is-active').removeClass('is-active');
+		  $(this).addClass('is-active');
+		} else {
+		  event.preventDefault();
+		}
+	  });
+	});
+	</script>
+    <script>
+        $(function () {
+            $("#wizard1").simpleWizard({
+                cssClassStepActive: "active",
+                cssClassStepDone: "done",
+                onFinish: function() {
+                    alert("Wizard finished")
+                }
+            });
+        });
+    </script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-36251023-1']);
+	  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+				e.preventDefault();
+				$(this).siblings('a.active').removeClass("active");
+				$(this).addClass("active");
+				var index = $(this).index();
+				$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+				$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+			});
+		});
+	</script>
+	
+	<script>
+		
+		$('#btnClick').on('click',function(){
+			if($('#1').css('display')!='none'){
+			$('#2').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#2').css('display')!='none'){
+				$('#1').show().siblings('div').hide();
+			}
+		});
+
+		$('#btnClicks').on('click',function(){
+			if($('#2').css('display')!='none'){
+			$('#1').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#1').css('display')!='none'){
+				$('#2').show().siblings('div').hide();
+			}
+		});
+		
+		$('#btnClicksfour').on('click',function(){
+			if($('#9').css('display')!='none'){
+			$('#8').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#8').css('display')!='none'){
+				$('#9').show().siblings('div').hide();
+			}
+		});
+		
+		$('#btnClicksstepfirst').on('click',function(){
+			if($('#11-1').css('display')!='none'){
+			$('#10-1').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#10-1').css('display')!='none'){
+				$('#11-1').show().siblings('div').hide();
+			}
+		});
+			
+		$('#stepsfive-t').on('click',function(){
+			if($('#a_13').css('display')!='none'){
+			$('#a_12').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_12').css('display')!='none'){
+				$('#a_13').show().siblings('div').hide();
+			}
+		});
+		
+		$('#stepssix').on('click',function(){
+			if($('#a_14').css('display')!='none'){
+			$('#a_13').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_13').css('display')!='none'){
+				$('#a_14').show().siblings('div').hide();
+			}
+		});
+		
+		$('#btnfirstback').on('click',function(){
+			if($('#a_12').css('display')!='none'){
+			$('#a_11').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_11').css('display')!='none'){
+				$('#a_12').show().siblings('div').hide();
+			}
+		});
+		
+		$('#btnfirstbackthreee').on('click',function(){
+			if($('#a_12').css('display')!='none'){
+			$('#a_11').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_11').css('display')!='none'){
+				$('#a_12').show().siblings('div').hide();
+			}
+		});
+		
+		$('#btnfirstbacktwo').on('click',function(){
+			if($('#a_12').css('display')!='none'){
+			$('#a_11').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_11').css('display')!='none'){
+				$('#a_12').show().siblings('div').hide();
+			}
+		});
+		
+		$('#stepsseven').on('click',function(){
+			if($('#a_13').css('display')!='none'){
+			$('#a_12').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_12').css('display')!='none'){
+				$('#a_11').show().siblings('div').hide();
+			}
+		});
+		$('#btnClickst').on('click',function(){
+			if($('#2').css('display')!='none'){
+			$('#1').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#1').css('display')!='none'){
+				$('#2').show().siblings('div').hide();
+			}
+		});
+		$('#stepstwo').on('click',function(){
+			if($('#a_12').css('display')!='none'){
+			$('#a_11').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_11').css('display')!='none'){
+				$('#a_12').show().siblings('div').hide();
+			}
+		});
+		$('#stepsthree').on('click',function(){
+			if($('#a_12').css('display')!='none'){
+			$('#a_11').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_11').css('display')!='none'){
+				$('#a_12').show().siblings('div').hide();
+			}
+		});
+		$('#stepsfour').on('click',function(){
+			if($('#a_14').css('display')!='none'){
+			$('#a_13').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#a_13').css('display')!='none'){
+				$('#a_14').show().siblings('div').hide();
+			}
+		});
+		
+		
+	</script>
+	
+	<script>
+		$('#btnClickstcaptcha').on('click',function(){
+			if($('#8').css('display')!='none'){
+			$('#9').html($('#static').html()).show().siblings('div').hide();
+			}else if($('#9').css('display')!='none'){
+				$('#8').show().siblings('div').hide();
+			}
+		});
+	</script>
+	
+	
+	
+	<script>
+        (function(){
+    function previewImage(file) {
+        var galleryId = "gallery";
+
+        var gallery = document.getElementById(galleryId);
+        var imageType = /image.*/;
+
+        if (!file.type.match(imageType)) {
+            throw "File Type must be an image";
+        }
+
+        var thumb = document.createElement("div");
+        thumb.classList.add('thumbnail');
+
+        var img = document.createElement("img");
+        img.file = file;
+        thumb.appendChild(img);
+        gallery.appendChild(thumb);
+
+        // Using FileReader to display the image content
+        var reader = new FileReader();
+        reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+        reader.readAsDataURL(file);
+    }
+
+    var uploadfiles = document.querySelector('#fileinput');
+    uploadfiles.addEventListener('change', function () {
+        var files = this.files;
+        for(var i=0; i<files.length; i++){
+            previewImage(this.files[i]);
+        }
+
+    }, false);
+})();
+    </script>
+
+</body>
+</html>

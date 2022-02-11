@@ -1,0 +1,168 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.accordion-tabs-minimal {
+  line-height: 1.5;
+  padding: 0;
+}
+
+.accordion-tabs-minimal::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.accordion-tabs-minimal .tab-header-and-content {
+  list-style: none;
+}
+
+@media screen and (min-width: 40em) {
+  .accordion-tabs-minimal .tab-header-and-content {
+    display: inline;
+  }
+}
+
+.accordion-tabs-minimal .tab-link {
+  border-top: 1px solid #dcdcdc;
+  color: #008ae7;
+  display: block;
+  padding: 0.75em 1.618em;
+  text-decoration: none;
+  background:#fff;
+}
+
+@media screen and (min-width: 40em) {
+	.cap-toppad{padding-top:0;}
+  .accordion-tabs-minimal .tab-link {
+    border-top: 0;
+    display: inline-block;
+	background:#fff;
+	font-weight:bold;
+  }
+}
+
+.accordion-tabs-minimal .tab-link:hover {
+  color: #000;
+  background:#f5f5f5;
+}
+
+.accordion-tabs-minimal .tab-link:focus {
+  outline: none;
+}
+
+.accordion-tabs-minimal .tab-link.is-active {
+  border-bottom: 0;  
+  background:#0071bc;
+  color:#fff;
+}
+
+@media screen and (min-width: 40em) {
+	.cap-toppad{padding-top:0;}
+  .accordion-tabs-minimal .tab-link.is-active {
+    /* border-bottom-color here needs to be set to the same color as your background to hide the top border on the content */
+    border-bottom-color: #fff;
+    margin-bottom: -1px;
+	background:#0072bc;
+	color:#fff;
+  }
+}
+
+.accordion-tabs-minimal .tab-content {
+  display: none;
+  padding: 1.5em 1.618em;
+  width: 100%;
+  /*background:transparent url("bg-px.png") repeat 0 0;*/
+  background:#fff;
+  float:left;
+  border-left:1px solid #0072bc;
+	border-right:1px solid #0072bc;
+	border-bottom:1px solid #0072bc;
+}
+.bg-img{
+	background-image: url(bg-main.jpg);
+    background-repeat: none;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+@media screen and (min-width: 40em) {
+	.cap-toppad{padding-top:0;}
+  .accordion-tabs-minimal .tab-content {
+    border-top: 4px solid #0072bc;
+    float: left;
+	background:#fff;
+	color:#000;
+	border-left:1px solid #0072bc;
+	border-right:1px solid #0072bc;
+	border-bottom:1px solid #0072bc;
+	
+  }
+  .accordion-tabs-minimal .tab-content p{color:#000;}
+  .is-open{}
+  .form-group span.captcha-txt{text-align:center;}
+}
+.white-container{background:#fff; float:left; padding:20px;}
+.add-section-rhs{padding-bottom:10px;}
+.labeling-pad{padding-top:20px;}
+.rht-gap{margin-right:20px;}
+.labeling{padding:7px;}
+.col-form-label{font-weight:normal; color:#000; text-align:right;}
+.is-active .pay{background:transparent url("pay-active.png") no-repeat; width:20px; height:26px; float:left;}
+.pay{background:transparent url("pay-normal.png") no-repeat; width:20px; height:26px; float:left;}
+.is-active .tax{background:transparent url("tax-active.png") no-repeat; width:20px; height:26px; float:left;}
+.tax{background:transparent url("tax-normal.png") no-repeat; width:20px; height:26px; float:left;}
+.is-active .bills{background:transparent url("bill-active.png") no-repeat; width:20px; height:26px; float:left;}
+.bills{background:transparent url("bill-normal.png") no-repeat; width:20px; height:26px; float:left;}
+.main_header{color:#000; font-size:20px; display:block; padding-bottom:20px;}
+.impt{font-size:12px; color:#000; float:left;}
+.acrd-tabs{padding-top:8x;}
+.title-name{font-size: 28px; padding-top: 10px; text-align: center; color:#000; padding:0 0 20px 0;}
+
+.top-main-bg{background:#fff; padding:0; margin:0; border:1px solid #0072bc; min-height:350px;}
+.top-main-bg-table{background:#fff; padding:0; margin:0; border:1px solid #0072bc; min-height:400px;}
+.form-control:focus{box-shadow:none;}
+.img-sizer{    border: 1px solid #0072bc;
+    vertical-align: middle;
+    width: 160px;
+    height: 160px;   
+    text-align: center;
+    margin: 10px;
+    float: left;
+    overflow: hidden;
+    text-align: center;}
+.img-sizer input{display:inline-block;}
+
+.lodingfile input{display:inline;
+    overflow: hidden;
+    border-radius: 4px;}
+	input[type=file]{display:inline-block;}
+	.top-mn-header{text-align:left; font-size:12px;}
+	.lft-sd{float:left;}
+	.divider{background:#eef5fa; text-align:center; margin:20px 30px; font-weight:bold;}
+	.divider-label{background: #eef5fa;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    /*margin: 20px;*/
+    font-size: 14px;
+    width: 100%;}
+	.cal-endra{position: absolute; top: 7px; right: 25px;}
+	label.captcha-label{float:left;}
+	.form-group span.captcha-txt{font-size:22px; color:#cc0000; font-style:italic; font-weight:bold;}
+	.cap-toppad{padding-top:35px;}
+	.flleft{float:left;}
+	.flleft-text{text-align:left; padding-left:25px;}
+	
+input.form-check-input{width:40px}

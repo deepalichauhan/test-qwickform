@@ -1,0 +1,336 @@
+<!DOCTYPEhtml>
+<%@page import="com.sabpaisa.qforms.beans.CollegeBean"%>
+<%@page import="com.sabpaisa.qforms.beans.SampleFormBean"%>
+<%@page import="java.util.Properties"%>
+<%@page
+	import="com.sabpaisa.qforms.config.AppPropertiesConfig"%>
+<%@page import="java.util.Base64"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@page import="org.apache.logging.log4j.LogManager"%>
+<%@page import="org.apache.logging.log4j.Logger"%>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />	
+	<title>E-receipt</title>	
+	<link rel='stylesheet' type='text/css' href='css/stylerecipt.css' />
+	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
+	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
+	<script type='text/javascript' src='js/example.js'></script>
+	
+	<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+   if (self === top) {
+       var antiClickjack = document.getElementById("antiClickjack");
+       antiClickjack.parentNode.removeChild(antiClickjack);
+   } else {
+       top.location = self.location;
+   }
+</script>
+</head>
+<body>
+<%
+Logger log = LogManager.getLogger("Consolodate data");
+	Integer sesBid = null, sesCid = null;
+	CollegeBean collegeBean = new CollegeBean();
+	SampleFormBean formBean=new SampleFormBean();
+	
+	Integer valClientId=1;
+	try {
+		formBean=(SampleFormBean)session.getAttribute("sampleFormForView");
+		sesBid = (Integer) session.getAttribute("BankId");
+		sesCid = (Integer) session.getAttribute("CollegeId");
+		collegeBean = (CollegeBean) session.getAttribute("CollegeBean");
+
+		log.info("college Bean at jsp ========> "+collegeBean.getCollegeId());
+		log.info("college Bean at jsp ========> "+collegeBean.getCollegeName());
+		log.info("Sample form bean id  at jsp ========> "+formBean.getFormId());
+%>
+<%
+	} catch (java.lang.NullPointerException e) {
+%>
+
+<script type="text/javascript">
+			window.location = "PaySessionOut";
+			</script>
+<%
+	}
+%>
+	<%
+		
+			String usercookie = null;
+			String sessionID = null;
+			String dispchar = "display:none";
+			Cookie[] cookies = request.getCookies();
+			if (cookies != null) {
+		for (Cookie cookie : cookies) {
+
+			if (cookie.getName().equals("user"))
+		usercookie = cookie.getValue();
+			if (cookie.getName().equals("JSESSIONID"))
+		sessionID = cookie.getValue();
+		}
+			} else {
+		sessionID = session.getId();
+			}
+	%>
+	<%
+		AppPropertiesConfig appProperties = new AppPropertiesConfig();
+		Properties properties = appProperties.getPropValues();
+
+		String qFormsIP = properties.getProperty("qFormsIP");
+		String clientLogoLink = properties.getProperty("clientLogoLink");
+		String clientLogoLinkSECI = properties.getProperty("clientLogoLinkSECI");
+		String fileUploadPathNew=properties.getProperty("fileUploadPathNew");
+		String imageFileURL = properties.getProperty("cobImage");
+		String tot1="";
+		
+	%>
+
+<div class="bg print"></div>
+	<div id="page-wrap">
+	
+		<div id="header">E-Receipt</div>
+		<div id="identity" class="flt full">
+			<div class="main-logo">
+			
+			 <%--  <span class="picturecontainer flt">
+			  <%
+				if (null != collegeBean.getCollegeImage()) {
+			%>
+			  <img src="data:image/png;base64,<%=Base64.getEncoder().encodeToString(collegeBean.getCollegeImage())%>" class="horizontalcenter"/>
+			  <%}else{%>
+		<img src="img\photo.png" class="horizontalcenter"/>
+			  
+		<%}%>
+			  
+			  </span>
+			  <span class="headingtxt"><%=collegeBean.getCollegeName()%><br><%=collegeBean.getStateBean().getStateName()%></span>
+			  <span class="picturecontainer">
+			 	<% if(null!=collegeBean.getBankDetailsOTM().getBankImage()){ %>
+			  <img src="data:image/png;base64,<%=Base64.getEncoder().encodeToString(collegeBean.getBankDetailsOTM().getBankImage())%>" class="horizontalcenter"/>
+			  <%}else{%>
+		<img src="images\photo.png" class="horizontalcenter"/>
+			  
+		<%}%>
+			  
+			  </span> --%>
+			  
+              
+            </div>
+			
+		
+		</div>
+		<div style="clear:both"></div>
+		<c:set var="feeName">
+			<c:out value="${beanTransData.feeName}"/>
+		</c:set>		
+		<form id="nitForm" action="payForm" method="POST">
+			<div id="customer">
+				<table id="meta-heads" width="100%">
+					<tr>
+						<td colspan="3" class="meta-head stund">E-Receipt For <%=collegeBean.getBankDetailsOTM().getBankname()%> Collect Payment 
+						<div style="clear:both"></div>
+						<span class="timetable">Date: 
+							<fmt:formatDate value="${beanTransData.transDate}" pattern="yyyy-MM-dd'T'HH:mm" var="parsedDateTime1" type="both" />
+							<c:out value="${parsedDateTime1}"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<table class="table-td" style="width: 100%;">
+								<%if(null!=formBean.getPhotograph()){ %>
+									<tr class="lightgray">
+										<td colspan="2">
+											<div class="form-group">
+											<div class="university-logo">
+												<p class="top-mn-header">Applicant Photograph</p>
+													<%
+														try {
+													%>
+															<img
+																src="data:image/png;base64,<%=Base64.getEncoder().encodeToString(formBean.getPhotograph())%>"
+																alt="" title="" width="125px" height="150px" class="flleft">
+													<%} catch (Exception ex) {
+															ex.printStackTrace();
+														}
+													%>
+											</div>
+											</div>
+										</td>
+									</tr>
+								<%}%>
+							</table>
+						</td>
+					</tr>
+	                <tr>
+	                    <td>Reference Number</td>
+	                    <td><c:out value="${beanTransData.spTransId}"/></td>
+	                </tr>
+	                <tr>
+	                    <td>Receipt Number</td>
+	                    <td><c:out value="${beanTransData.transId}"/></td>
+	                </tr>
+	                <tr>
+	                    <td>Category Name</td>
+	                    <td><c:out value="${beanTransData.feeName}"/></td>
+	                </tr>
+										
+					<%-- <c:forEach items="${formViewData}" var="formViewData" >
+							<tr>
+							<td><c:set var="nextTab">
+									<c:out value="${formViewData.label}" />
+								</c:set> 
+								<c:choose>
+								<c:when test="${nextTab=='NextPageTitle'}">
+								</c:when> 
+								<c:otherwise>
+									<strong><c:out value="${formViewData.label}" /></strong>
+								</c:otherwise>
+								</c:choose>
+								</td>
+							<td>
+								<c:set var="nextTab1">
+									<c:out	value="${formViewData.value}" />
+								</c:set> 
+								<c:choose>
+									<c:when test="${nextTab1=='Empty'}">
+									</c:when> 
+									<c:otherwise>
+										<strong><c:out value="${formViewData.value}" /></strong>
+									</c:otherwise>
+								</c:choose>
+							</td>
+						</tr>
+					</c:forEach> --%>
+					
+					<c:forEach items="${formViewData}" var="formViewData">
+							<tr>
+								<td class="wd-four"><c:set var="nextTab">
+										<c:out value="${formViewData.label}" />
+									</c:set> <c:choose>
+										<c:when test="${nextTab=='PageBreak'}">
+										</c:when>
+										<c:otherwise>
+											<strong><c:out value="${formViewData.label}" /></strong>
+										</c:otherwise>
+									</c:choose></td>
+								<td class="wd-six">
+								<c:set var="nextTab1">
+										<c:out
+											value="${not empty formViewData.value ? formViewData.value.substring(value.indexOf('*')+0) : 'Empty'}" />
+									</c:set> 
+									<c:set var="fieldValue">
+										<c:out
+											value="${formViewData.value.substring(value.indexOf('*')+0)}" />
+									</c:set> <c:set var="pathFromProperties">
+										<c:out value='<%=fileUploadPathNew.substring(0,14)%>' />
+									</c:set> <c:set var="fileURL">
+										<c:out value='<%=imageFileURL%>' />
+									</c:set> <c:choose>
+										<c:when test="${nextTab1=='Empty'}">
+											<c:out value=" " />
+										</c:when>
+										<c:when test="${fieldValue.indexOf('QwikFormContent')==-1}">
+											<strong><c:out value="${fieldValue}" /></strong>
+										</c:when>
+										<c:otherwise>
+											<a  href='<c:out value="${fileURL}${fieldValue}" />'  target="_blank">
+									<c:out value='${fieldValue.substring((fieldValue.lastIndexOf("/")+1), fieldValue.length())}' />
+									</a>
+
+											<%-- <a  href='<c:out value="https://portal.sabpaisa.in${fieldValue}" />'  target="_blank">
+									<c:out value='${fieldValue.substring((fieldValue.lastIndexOf("/")+1), fieldValue.length())}' />
+									</a> --%>
+
+											<%-- <iframe height="80" width="160" src='<c:out value="file://${fieldValue}" />'></iframe> --%>
+											<%-- <img height="80" width="160" src='<c:out value="${fieldValue}" />'> --%>
+
+											<%-- <iframe height="80" width="160"
+												src='<c:out value="${fileURL}${fieldValue}" />'></iframe>
+
+											<c:out
+												value='${fieldValue.substring((fieldValue.lastIndexOf("/")+1), fieldValue.length())}' /> --%>
+										</c:otherwise>
+									</c:choose></td>
+							</tr>
+						</c:forEach>
+					
+					
+					
+					
+					<tr>
+	                    <td>Payment Mode</td>
+	                    <td>&nbsp;<c:out value="${beanTransData.getTransPaymode()}" /></td>
+	                </tr>
+					
+					<tr>
+	                    <td>Total Amount of Fees</td>
+	                    <td>Rs.&nbsp;<c:out value="${beanTransData.transOgAmount}" /></td>
+	                </tr>
+					<tr>
+	                    <td>Payment Status</td>
+	                    <td><c:out value="${beanTransData.transStatus}" /></td>
+	                </tr>
+	                <tr>
+						<td colspan="2">
+							<table class="table-td" style="width: 100%;">
+								<%if(null!=formBean.getSignature()){ %>
+									<tr class="lightgray">
+										<td colspan="2">
+											<div class="form-group">
+											<div class="university-logo">
+												<p class="top-mn-header">Applicant Signature</p>
+													<%
+														try {
+													%>
+															<img
+																src="data:image/png;base64,<%=Base64.getEncoder().encodeToString(formBean.getSignature())%>"
+																alt="" title="" width="125px" height="150px" class="flleft">
+													<%} catch (Exception ex) {
+															ex.printStackTrace();
+														}
+													%>
+											</div>
+											</div>
+										</td>
+									</tr>
+								<%}%>
+							</table>
+						</td>
+					</tr>
+	            </table>
+			</div>
+		<%-- </c:otherwise>
+		</c:choose> --%>
+		</form>
+		
+		<button type="button" id="printpagebutton" title="Click Here to Print Receipt" onclick="printpage()" class="btn btn-sm btn-info"> Print</button>
+		<div id="terms">
+			<p class="tnm-cond">Terms & Condition</p>
+			<ul>
+				<li>An E-Receipt is an electronic document with a unique confirmation number given to remitter in place of a paper receipt</li>
+				<li>For details, rules and terms & conditions of E-Receipt, please visit <a href="http://43.252.89.79/QForms/TermsAndConditions.html" target="_blank">www.sabpaisa.in.</a></li>
+				<li>Payers are advised to carry transaction e-reciept for future reference</li>
+				<li>When you register with above college/bank/, we or any of our partners/affiliate/staff may contact you from time to time to provide the details/information of such payments/services that we believe may benefit you.</li>
+				
+			</ul>		  
+		</div>	
+		<div class="copright">
+		  © COPYRIGHT 2016. Powered by SRS Live Technologies Pvt Ltd.<br/>
+		  <a href="http://www.sabpaisa.in/" target="_blank"><img id="image" src="images/SabPaisa-logo.png" alt="SabPaisa" title="SabPaisa" /></a>
+		  </div>
+	</div>	
+</body>
+<script type="text/javascript">
+		function printpage() {
+
+			var printButton = document.getElementById("printpagebutton");
+
+			printButton.style.visibility = 'hidden';
+
+			window.print()
+			printButton.style.visibility = 'visible';
+		}
+	</script>
+</html>

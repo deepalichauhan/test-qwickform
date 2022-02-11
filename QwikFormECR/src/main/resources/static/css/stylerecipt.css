@@ -1,0 +1,67 @@
+* { margin: 0; padding: 0; }
+@media print {
+	body{background:transparent; font: 14px/1.4 arial;  color:#353535;}
+	}
+
+#meta-heads{background:transparent url("print-sabpaisalogo.png") center center no-repeat;}
+#page-wrap { width: 800px; margin: 0 auto; }
+textarea { border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none; }
+table { border-collapse: collapse; }
+table td, table th { border: 1px solid #d8d7d7; padding: 5px;}
+
+#header { height: 15px; width: 100%; margin: 10px 0; background: #0072bc; text-align: center; color: white; font: bold 15px Helvetica, Sans-Serif; text-decoration: uppercase; /*letter-spacing: 20px;*/ padding: 8px 0px; }
+
+#address { width: 250px; height: 150px; float: left; }
+#customer { overflow: hidden; }
+.flt{float:left;}
+.frt{float:right;}
+.main-logo{width:100%;}
+.main-logo span.headingtxt{padding: 23px 10px; float: left; width: 540px; font-size: 22px; text-align: center; font-weight: bold;}
+.main-logo img{max-width: 120px; max-height: 77px;}
+.colg-logo td img{text-align:center !important;}
+.colg-logo img{max-width: 80px; max-height: 80px;}
+.full{width:100%;}
+.timetable{font-weight:normal;}
+#logo { text-align: right; float: right; position: relative; margin-top: 25px; border: 1px solid #fff; max-width: 540px; max-height: 100px; overflow: hidden; }
+#logo:hover, #logo.edit { border: 1px solid #000; margin-top: 0px;  }
+#logoctr { display: none; }
+#logo:hover #logoctr, #logo.edit #logoctr { display: block; text-align: right;  background: #eee; padding: 0 5px; }
+#logohelp { text-align: left; display: none; font-style: italic; padding: 10px 5px;}
+#logohelp input { margin-bottom: 5px; }
+.edit #logohelp { display: block; }
+.edit #save-logo, .edit #cancel-logo { display: inline; }
+.edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo { display: none; }
+#customer-title { font-size: 20px; font-weight: bold; float: left; }
+
+#meta { margin-top: 1px; width: 400px; float: right; }
+#meta td:first-child { text-align: center;}
+#meta td { text-align: right;}
+#meta td.meta-head { text-align: left; background: #eee; }
+#meta td textarea { width: 100%; height: 20px; text-align: right; }
+
+#meta-heads { margin-top: 10px; width: 100%; }
+#meta-heads td { text-align: left;  }
+#meta-heads td.meta-head { text-align: left; /*background: #eee;*/}
+#meta-heads td textarea { width: 100%; height: 20px; text-align: right; }
+
+td.stund{text-align:center!important; font-weight:bold;}
+
+
+#terms { text-align: center; margin: 20px 0 0 0; }
+#terms ul{margin:0; padding:0;}
+#terms ul li{text-align:left; margin:0 20px;}
+#terms h5 { text-transform: uppercase; font: 13px Helvetica, Sans-Serif; border-bottom: 1px solid black; padding: 0 0 8px 0; margin: 0 0 8px 0; }
+.tnm-cond{text-align:left; font-weight:bold; font-size:18px; border-bottom:1px solid #ccc; padding:5px 0; margin-bottom:15px;}
+.picturecontainer{
+        width:120px;
+        height:80px;
+        display:table-cell;
+        vertical-align:middle;		
+    }
+    .horizontalcenter{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        vertical-align:middle;	
+    }
+	.copright{text-align:center; padding:90px 0 0 0; bottom:0;}

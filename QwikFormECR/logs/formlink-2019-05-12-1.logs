@@ -1,0 +1,4 @@
+2019-05-12 11:18:55.343  INFO qforms.util.DBConnection : 29 - username == root ::::: password ::::::: root
+2019-05-12 11:18:55.346  INFO qforms.util.DBConnection : 30 - DB_URL == jdbc:mysql://localhost:3306/qwikForms1
+2019-05-12 11:18:55.347  INFO qforms.util.DBConnection : 31 - DRIVER == com.mysql.cj.jdbc.Driver
+2019-05-12 11:18:55.802  INFO qforms.util.DBConnection : 44 - Connection is ::::::::: com.mysql.cj.jdbc.ConnectionImpl@738dc9b

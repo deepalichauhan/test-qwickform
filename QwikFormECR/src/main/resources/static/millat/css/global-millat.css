@@ -1,0 +1,255 @@
+/**
+ * designing structure for page content
+ * built (with love) using Bootstrap
+ */
+body {
+  /*padding-top: 55px;*/
+}
+
+ul.footer-ul{}
+ul.footer-ul li{display:inline; list-style-type:none; border-right:1px solid #ccc; color:#ccc; padding:0 10px;}
+ul.footer-ul li a{color:#666;}
+.topheader{vertical-align:top;float:left;padding-right:20px;}
+.interstedtxt{display:block; text-align:center; font-size:22px;}
+.reg-but{text-align:center;padding:20px 0 10px 0;}
+.rgh-gap{padding-right:8px;}
+.panel-group {
+    margin-bottom: 20px;
+}
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+.panel-primary {
+    border:1px solid #88c3f5;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+tr.panel-heading {
+    color: #fff;
+    background-color: #88c3f5;
+    border-color: #88c3f5;
+	font-weight:bold;
+}
+
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #88c3f5;
+    border-color: #88c3f5;
+}
+.panel-body {
+    padding: 15px;
+}
+.table{margin-bottom:0; padding-top:10px;}
+.bs-example{border:1px solid #ccc; border-radius:4px;}
+.bs-example td,.bs-example th{border-right:1px solid #ccc;}
+.bs-example td:last-child,.bs-example th:last-child{border-right:none;}
+.span4  img.img-center{text-align:center;}
+#navigation {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  height: 55px;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1px 6px #2d2d2d;
+  background: #fff;
+  border-top: 1px solid #e6e7e8;
+  border-bottom: 1px solid #e6e7e8;
+}
+#navigation .navlinks {
+  list-style: none;
+}
+#navigation .navlinks li {
+  display: inline-block;
+  margin-right: 5px;
+}
+#navigation .navlinks li a {
+  display: block;
+  float: left;
+  padding: 0 12px;
+  line-height: 55px;
+  font-weight: bold;
+  color: #777;
+}
+#navigation .navlinks li a:hover {
+  text-decoration: none;
+  color: #444;
+  background: #fff;
+}
+
+
+#heading {
+  display: block;
+  width: 100%;
+  height: 250px;
+  padding: 20px 0;
+  background: url('../images/kca.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 -4px 9px -3px #000;
+  -moz-box-shadow: inset 0 -4px 9px -3px #000;
+  box-shadow: inset 0 -4px 9px -3px #000;
+}
+#heading h1, #heading h2, #heading h3, #heading h4, #heading h5, #heading p {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.25);
+}
+
+#heading h1 {
+  font-size:54px;
+  line-height: 222px;
+  letter-spacing: -1px;
+  color: #fff;
+}
+
+#heading h4 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+
+
+#footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+
+
+/** alternate responsive traits **/
+@media(max-width:767px) {
+  body {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  
+  #heading > .container {
+    padding: 0 15px;
+  }
+  
+  #main-content > .container {
+    padding: 0 15px;
+  }
+  
+  #footer > .container {
+    padding: 0 15px;
+  }
+  #heading h1 {
+    font-size: 36px;
+    line-height: 55px;
+	padding-top:25px;
+  }
+  #heading h4 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media(max-width:550px) {
+  #heading {
+    height: 150px;
+  }
+  #navigation .navlinks li {
+    margin-right: 1px;
+  }
+  #navigation .navlinks li a {
+    padding: 0 5px;
+    font-size: 12px;
+  }
+}
+.navlinks li img{max-width:188px; }
+.btns{padding:10px 20px; background:#779303; font-size:20px; color:#fff; border-radius:4px; text-align:center; border:none; color:#fff;}
+.btns a{color:#fff;}
+ul.listtype {
+    width: 100%;
+    padding: 0;
+    margin: 5px 0;
+    line-height: 39px;
+}
+ul.listtype li img{width:110px;}
+.listtype li {
+    list-style-type: none;
+    display: inline-block;
+}
+.lft {
+    float: left;
+    width: 33%;
+    text-align: left;
+}
+.cnter {
+    text-align: center;
+    width: 33%;
+}
+.rgt {
+    float: right;
+    width: 33%;
+    text-align: right;
+}
+		.accordion{margin:0;}
+		button.accordion {
+			background-color: #eee;
+			color: #444;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 15px;
+			transition: 0.4s;
+			
+			
+		}
+		
+		button.accordion.active, button.accordion:hover {
+			background-color: #ddd;
+			
+			
+		}
+		button.accordion.active:after {
+			content: "\2212";
+		}
+		button.accordion:after {
+			content: '\002B';
+			font-size: 13px;
+			color: #777;
+			font-weight: bold;
+			float: right;
+			margin-left: 5px;
+		}
+		div.panel {
+			padding: 0 18px;
+			background-color: white;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+		}
+		.tabsection{border:1px solid #adadad; margin:2px 0;}
+		.smallheading{display:block; margin:10px 0;}
+		p{padding:10px 0;}
+		.demo {
+    color: #cc0000;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+input.xxx{margin:-16px 7px;}
+.hhhead{padding-bottom:10px; font-size:20px; font-weight:bold;}
+.headers{padding:0; margin:0; font-size:20px; }
+.bulleted li{list-style-type:number;}
+		

@@ -1,0 +1,12 @@
+Restricted Fields for QForms in LP Process before file uploading at the form creation in SAmpleFormAction and OfflineFormController 
+===================================================================================================================================
+
+as UserName - APPLICANT_NAME Or STUDENT_NAME or Student_Name or NAME_OF_PUBLICATION
+
+as Email - EMAIL or EMAIL_ID or PUBLICATION_EMAIL
+
+as Contact Number - CONTACT_NUMBER or Contact_Number or Mobile_Number or MOBILE_NUMBER or PUBLICATION_PHONE_NUMBER
+
+as DOB - DATE_OF_BIRTH or DATE OF BIRTH or DOB or dob or Current_Date
+
+as Final Payable Amount - AMOUNT or TOTAL AMOUNT or Total Amount or Amount or Total_Payable_Amount or TOTAL_PAYABLE_AMOUNT

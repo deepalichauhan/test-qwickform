@@ -1,0 +1,66 @@
+For Dynamic form creation process as (QC)
+=========================================
+
+1. Login as Admin portal
+2. Click on Clint link
+3. Open Configuration Part
+4. Clieck on Form Builder
+5. Enter form name as required
+6. Choose - Basic Info not Required as Yes always
+7. Chppse - any fee name from dropdown
+8. Click on Disable Date Validity
+9. Choose - Form Life Cycle
+10. Choose - form payer
+11. Add custom fields - if not present in Form fields
+12. Choose - Select Form Fields as per requirement of the form	OR add Page break as required
+13. Click on If you don't want to use payment process. always
+14. Save Your Form
+
+
+Note:- 
+======
+
+1. Point number 6 and 13 are mendatory. because when these fields are yes or clicked, then user will not moove to payment gateway and basic info form will not show.
+
+2. When form will go live and want to moove payment gateway, inform to support team for this. they will manage "Basic Info not Required" and "If you don't want to use payment process." fields as 'No' from DB.
+
+
+For Offline form creation process as (LP)
+=========================================
+
+1. Login as Admin portal
+2. Click on Clint link
+3. Open Configuration Part
+4. Clieck on Form Builder
+5. Enter form name as required
+6. Choose - Basic Info not Required as Yes always
+7. Chppse - any fee name from dropdown
+8. Click on Disable Date Validity
+9. Choose - Form Life Cycle
+10. Choose - form payer
+11. Add custom fields - if required 
+12. Choose any - Notification from field list always
+13. Click on Upload Offline Form
+14. Choose File and click on one or two fields as validated fields for filling
+15. Write descriptions and click on upload
+16. Choose - Select Form Fields as per requirement of Form and choose mandetory if required
+17. Click on If you don't want to use payment process. always
+18. Save Your Form
+
+
+Note:- 
+======
+
+1. Use "name" field in uploaded excel as APPLICANT_NAME, STUDENT_NAME, NAME.
+
+2. Use "mobile" field in uploaded excel as CONTACT_NUMBER, MOBILE_NUMBER.
+
+3. Use "email" field in uploaded excel as EMAIL, EMAIL_ID.
+
+4. Use "amount" field in uploaded excel as TOTAL_PAYABLE_AMOUNT, Total_Amount, AMOUNT.
+
+5. If you want to use amount field as multiplier then choose different filed name from TOTAL_PAYABLE_AMOUNT, Total_Amount, AMOUNT.
+
+6. Point number 6 and 13 are mendatory. because when these fields are yes or clicked, then user will not moove to payment gateway and basic info form will not show.
+
+7. When form will go live and want to moove payment gateway, inform to support team for this. they will manage "Basic Info not Required" and "If you don't want to use payment process." fields as 'No' from DB.

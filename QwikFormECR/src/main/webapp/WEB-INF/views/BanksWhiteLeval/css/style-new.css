@@ -1,0 +1,120 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.accordion-tabs-minimal {
+  line-height: 1.5;
+  padding: 0;
+}
+
+.accordion-tabs-minimal::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.accordion-tabs-minimal .tab-header-and-content {
+  list-style: none;
+}
+
+@media screen and (min-width: 40em) {
+  .accordion-tabs-minimal .tab-header-and-content {
+    display: inline;
+  }
+}
+
+.accordion-tabs-minimal .tab-link {
+  border-top: 1px solid #dcdcdc;
+  color: #008ae7;
+  display: block;
+  padding: 0.75em 1.618em;
+  text-decoration: none;
+  background:#fff;
+}
+
+@media screen and (min-width: 40em) {
+  .accordion-tabs-minimal .tab-link {
+    border-top: 0;
+    display: inline-block;
+	background:#fff;
+  }
+}
+
+.accordion-tabs-minimal .tab-link:hover {
+  color: #000;
+  background:#f5f5f5;
+}
+
+.accordion-tabs-minimal .tab-link:focus {
+  outline: none;
+}
+
+.accordion-tabs-minimal .tab-link.is-active {
+  border-bottom: 0;  
+  background:#0071bc;
+  color:#fff;
+}
+
+@media screen and (min-width: 40em) {
+  .accordion-tabs-minimal .tab-link.is-active {
+    /* border-bottom-color here needs to be set to the same color as your background to hide the top border on the content */
+    border-bottom-color: #fff;
+    margin-bottom: -1px;
+	background:#0072bc;
+	color:#fff;
+  }
+}
+
+.accordion-tabs-minimal .tab-content {
+  display: none;
+  padding: 1.5em 1.618em;
+  width: 100%;
+  background:transparent url("bg-px.png") repeat 0 0;
+}
+
+@media screen and (min-width: 40em) {
+  .accordion-tabs-minimal .tab-content {
+    border-top: 4px solid #0072bc;
+    float: left;
+	background:transparent url("bg-px.png") repeat 0 0;
+	color:#fff;
+	border-left:1px solid #0072bc;
+	border-right:1px solid #0072bc;
+	border-bottom:1px solid #0072bc;
+	min-height:330px;
+  }
+  .accordioan-tabs-minimal .tab-content p{color:#000;}
+  .is-open{}
+  
+}
+.cur-pointer span{padding: 0 0 0 25px;}
+
+#home-button{padding:10px 22px; text-align: right; color:#000; font-weight:bold;}
+
+#header-search-button{padding:10px 0; text-align: right; color:#000; font-weight:bold;}
+#header-search-button span.cur-pointer{/*padding:0 8px;*/ padding:0; cursor:pointer; font-weight:normal;}
+.dataTables_length{width:50%; float:left; padding:10px 0;}
+.dataTables_length label select{padding: 6px 12px; font-size: 14px; line-height: 1.42857143; color: #555; background-color: #fff;  background-image: none; border: 1px solid #ccc;margin-bottom: 0;
+    border-radius: 4px;}
+.dataTables_filter{float:right; padding:10px 0;}
+.dataTables_filter label input{padding: 6px 12px; font-size: 14px; line-height: 1.42857143; color: #555; background-color: #fff;  background-image: none; border: 1px solid #ccc;margin-bottom: 0;
+    border-radius: 4px;}
+table.dataTable tbody th, table.dataTable tbody td{padding: 3px 10px !important; border: 1px solid #eaeaea; text-align:center;}
+table.no-footer{width:100% !important;}
+table.dataTable thead .sorting{text-align:center;}
+table th.srl-no{text-align:center; width:10% !important;}
+table th.col-names{text-align:left !important;}
+table#example td.clnt-logo{text-align:left;}
+table#example td.clnt-logo img{padding:5px 15px 5px 5px;}
+
+#example_paginate span a.current{color: #fff !important; background: #0072bc !important; border-color: #0072bc;}
+#example_paginate span a.current:hover{color:#fff !important;}
+#example_paginate span a.paginate_button{color: #333 ; background: #fafafa ; border-color: #ececec;}
+#example_paginate span a.paginate_button:hover{color:#333 !important;}
+#pageRfCode, .fl-col{float:left;}
+.redalert{color:#cc0000;}
